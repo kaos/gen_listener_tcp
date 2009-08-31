@@ -6,3 +6,6 @@ all:
 
 test: all
 	cd test ; ./test.escript
+
+run_echo: all
+	erl -pa ebin -s echo_server
