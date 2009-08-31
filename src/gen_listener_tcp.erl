@@ -103,6 +103,10 @@ init([{'__gen_listener_tcp_mod', Module} | InitArgs]) ->
             error_logger:info_report([listening_started, {port, Port}, {lsock, ListenSocket} | Options]), 
 
             {ok, create_acceptor(ListenSocket, Module, ModState)};
+        ignore ->
+            ignore;
+        {stop, Reason} ->
+            {stop, Reason};
         Other ->
             {stop, Other}
     end.
