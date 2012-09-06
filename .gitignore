@@ -1,4 +1,5 @@
 *.beam
 *~
-\#*\#
+\#*\#a
 test/logs/*
+/ebin/*
